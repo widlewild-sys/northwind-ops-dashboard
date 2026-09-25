@@ -1,9 +1,11 @@
 .kpi-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
 .kpi-card {
+  animation: panel-in 0.35s ease-out both;
   flex: 1 0 160px;
   display: flex;
   flex-direction: column;

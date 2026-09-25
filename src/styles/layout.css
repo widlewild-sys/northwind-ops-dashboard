@@ -1,4 +1,6 @@
 .topbar {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,6 +8,7 @@
   padding: 14px 24px;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
+  overflow-x: hidden;
 }
 
 .topbar__brand {
@@ -73,6 +76,7 @@
 }
 
 .panel {
+  animation: panel-in 0.35s ease-out both;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -161,12 +165,37 @@
 
 @media (max-width: 1024px) {
   .dashboard {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 16px;
     padding: 16px;
   }
 
+  .dashboard__kpis,
+  .dashboard__chart,
+  .dashboard__activity,
+  .dashboard__transactions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
   .topbar {
     padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar__name {
+    display: none;
+  }
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,3 +1,6 @@
+import DateRangePicker from "./DateRangePicker";
+import "../styles/date-picker.css";
+
 export default function Header() {
   return (
     <header className="topbar">
@@ -6,7 +9,7 @@ export default function Header() {
         <span className="topbar__name">Northwind Ops</span>
       </div>
       <div className="topbar__meta">
-        <span className="topbar__range">1 – 25 Sep 2026</span>
+        <DateRangePicker />
         <span className="topbar__avatar" aria-label="Signed in as Priya N.">PN</span>
       </div>
     </header>
