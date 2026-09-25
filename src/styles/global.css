@@ -1,0 +1,59 @@
+:root {
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --border: #e3e7ef;
+  --text: #1b2230;
+  --text-muted: #5d6779;
+  --accent: #2f5bea;
+  --accent-soft: #e6ecfd;
+  --good: #1f8a4c;
+  --bad: #c2412d;
+  --warn: #b7791f;
+  --radius: 10px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.btn {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 8px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #2448c4;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 2px;
+}
